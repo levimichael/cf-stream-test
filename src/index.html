@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <video id="input-video" controls autoplay muted></video>;
+
     <script type="module">
       import WHIPClient from './WHIPClient.js';
 
@@ -28,7 +30,7 @@
       import WHEPClient from './WHEPClient.js';
 
       const url =
-        'https://customer-krhfimaobx4q1tbo.cloudflarestream.com/ea77b0bbec80213c1b9a2d7841e7e198/webRTC/play';
+        'https://customer-krhfimaobx4q1tbo.cloudflarestream.com/1fc4b7c9a45f7df9862d4c440a99e8fa/webRTC/play';
       const videoElement = document.getElementById('remote-video');
 
       self.whepClient = new WHEPClient(url, videoElement);
