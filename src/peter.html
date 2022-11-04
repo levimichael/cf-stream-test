@@ -10,6 +10,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <video id="input-video" controls autoplay muted></video>;
+
+    <script type="module">
+      import WHIPClient from './WHIPClient.js';
+
+      const url =
+        'https://customer-krhfimaobx4q1tbo.cloudflarestream.com/cbcd48dea09ce963b040ba6e9969f453k162b06a117a7593d9f6408fac7535a3d/webRTC/publish';
+      const videoElement = document.getElementById('input-video');
+
+      self.whipClient = new WHIPClient(url, videoElement);
+    </script>
     <h4>ITS PEEEEETER</h4>
 
     <video id="remote-video" controls autoplay muted></video>
@@ -18,7 +29,7 @@
       import WHEPClient from './WHEPClient.js';
 
       const url =
-        'https://customer-krhfimaobx4q1tbo.cloudflarestream.com/1fc4b7c9a45f7df9862d4c440a99e8fa/webRTC/play';
+        'https://customer-krhfimaobx4q1tbo.cloudflarestream.com/02c9647972c9939c76cacd8fc1545ef0/webRTC/play';
       const videoElement = document.getElementById('remote-video');
 
       self.whepClient = new WHEPClient(url, videoElement);
